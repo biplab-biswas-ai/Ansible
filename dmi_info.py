@@ -37,7 +37,7 @@ def get_file_content(path, default=None, strip=True):
     else:
 #        command_cat = "sudo cat "
 #        data = (subprocess.Popen(command_cat, stdout=subprocess.PIPE, shell=True)).communicate()
-        data = subprocess.check_output(["/usr/bin/sudo", "/usr/bin/cat", path])
+        data = subprocess.check_output(["/usr/bin/cat", path])
     return data
 
 for (key, path) in DMI_DICT.items():
